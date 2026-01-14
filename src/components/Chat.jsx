@@ -5,7 +5,7 @@ import axios from 'axios';
 import gsap from 'gsap';
 import EmojiPicker from 'emoji-picker-react';
 
-const ENDPOINT = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000';
+const ENDPOINT = import.meta.env.VITE_BACKEND_URL || 'https://chatroom-backend-gc8i.onrender.com';
 
 const Chat = () => {
     const { user, logout } = useAuth();

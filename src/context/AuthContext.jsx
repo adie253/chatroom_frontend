@@ -20,7 +20,7 @@ export const AuthProvider = ({ children }) => {
 
     const login = async (username, password) => {
         try {
-            const res = await axios.post('http://localhost:3000/api/login', { username, password });
+            const res = await axios.post('https://chatroom-backend-gc8i.onrender.com/api/login', { username, password });
             const { token, username: userField } = res.data;
             localStorage.setItem('token', token);
             localStorage.setItem('username', userField);
