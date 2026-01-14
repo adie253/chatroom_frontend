@@ -5,7 +5,7 @@ import axios from 'axios';
 import gsap from 'gsap';
 import EmojiPicker from 'emoji-picker-react';
 
-const ENDPOINT = 'http://localhost:3000';
+const ENDPOINT = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000';
 
 const Chat = () => {
     const { user, logout } = useAuth();
@@ -225,7 +225,7 @@ const Chat = () => {
                         {partnerName}: <span style={{ color: 'var(--accent)' }}>{partnerMood}</span>
                     </div>
                 </div>
-            
+
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                     <br />
